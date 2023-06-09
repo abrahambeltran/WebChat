@@ -45,6 +45,10 @@
                 showMessage("no socket connection :( ");
                 return;
             }
+            if (messageBox.value == "") {
+                console.log("Must be filled out");
+                return;
+            }
             ws.send(messageBox.value);
             showMessage(messageBox.value);
         };
